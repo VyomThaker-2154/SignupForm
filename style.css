@@ -1,0 +1,151 @@
+
+:root {
+    --light-bg: #f2f5fa;
+    --light-form: white;
+    --system-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    font-family: var(--system-font);
+  }
+  P {
+    font-size: 1rem;
+    width: clamp(45ch, 50%, 75ch);
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    text-decoration: underline white;
+  }
+  ion-icon {
+    position: absolute;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+  }
+ 
+  .bg-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 800px;
+    height: 100%;
+    background-image: url('/img/dhiva-krishna-ToMqxOtnFGc-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .image-link {
+      color: white;
+      padding-bottom: 22px;
+    }
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--light-bg);
+    box-shadow: var(--shadow);
+    gap: 22px;
+    width: 100%;
+    .form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: var(--light-form);
+      padding: 22px;
+      gap: 22px;
+      box-shadow: var(--shadow);
+      > p {
+        padding: 0;
+        width: 100%;
+      }
+      .detail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 48px;
+        > label {
+          text-transform: uppercase;
+          font-size: 10px;
+          letter-spacing: 1px;
+          padding-bottom: 2px;
+        }
+        > input[type] {
+          flex-shrink: 0;
+          border: 2px solid var(--light-bg);
+          border-radius: 4px;
+          height: 24px;
+          transition: all 0.15s ease;
+        }
+        > input[type]:hover {
+          border: 2px solid #23bed3;
+          box-shadow: var(--shadow);
+        }
+        > input[type]:focus {
+          outline: 0;
+          border: 2px solid #23bed3;
+          box-shadow: var(--shadow);
+        }
+        > input[type].error-highlight {
+          border-color: #e95b5b;
+        }
+      }
+  
+      /* .detail:nth-child(2n) {
+        flex-basis: 100%;
+      } */
+    }
+    > h1,
+    p,
+    ion-icon {
+      padding: 0px 22px;
+      margin: 0;
+    }
+    > button {
+      margin: 0px 22px;
+      padding: 12px 48px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: medium;
+      color: white;
+      background-color: #23bed3;
+      box-shadow: var(--shadow);
+      transition: all 0.15s ease;
+    }
+    > button:hover {
+      transform: translate(0, -5px);
+    }
+    > button:active {
+      background-color: #f3713e;
+      box-shadow: inset var(--shadow);
+    }
+    .login {
+      color: #23bed3;
+    }
+    .login:hover {
+      text-decoration: underline #23bed3;
+    }
+    .error-text {
+      font-size: 12px;
+      color: #e95b5b;
+    }
+    .success-text {
+      font-size: 12px;
+      color: #49af49;
+    }
+  }
